@@ -25,11 +25,11 @@ public class CalculatorForm {
     private JPanel calculatorView;
     private JTextField displayField;
 
-    enum CalcOP {NONE, ADD, SUB, MULTIPLY, DIVIDE};
-
     private boolean isDigitEnterMode = false;
     private String displayString = "";
     private double result = 0;
+
+    enum CalcOP {NONE, ADD, SUB, MULTIPLY, DIVIDE};
     private CalcOP lastOP = CalcOP.NONE;
 
     private void evalLastOP(CalcOP currOP) {
@@ -73,36 +73,12 @@ public class CalculatorForm {
         displayField.setText(displayString);
     }
     public CalculatorForm() {
-        signButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        ceButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        }); 
-        clearButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        digitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         equalButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
             // calculate the result
             // show text
-
+            public void actionPerformed(ActionEvent e) {
+                evalLastOP(CalcOP.NONE);
             }
         });
         addButton.addActionListener(new ActionListener() {
@@ -129,6 +105,31 @@ public class CalculatorForm {
                 evalLastOP(CalcOP.DIVIDE);
             }
         });
+        signButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        ceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        }); 
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        digitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
         a4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
