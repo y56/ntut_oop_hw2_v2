@@ -3,13 +3,37 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CalculatorForm {
-    public void testClick(String button) throws Exception;
+    public void testClick(String button) throws Exception {
+        switch (button) {
+            case "+": addButton.doClick(); break;
+            case "-": subButton.doClick(); break;
+            case "*": multiplyButton.doClick(); break;
+            case "/": divideButton.doClick(); break;
+            case ".": digitButton.doClick(); break;
+            case "=": equalButton.doClick(); break;
+            case "±": signButton.doClick(); break;
+            case "CE": ceButton.doClick(); break;
+            case "CLEAR": clearButton.doClick(); break;
+            case "0": a0Button.doClick(); break;
+            case "1": a1Button.doClick(); break;
+            case "2": a2Button.doClick(); break;
+            case "3": a3Button.doClick(); break;
+            case "4": a4Button.doClick(); break;
+            case "5": a5Button.doClick(); break;
+            case "6": a6Button.doClick(); break;
+            case "7": a7Button.doClick(); break;
+            case "8": a8Button.doClick(); break;
+            case "9": a9Button.doClick(); break;
+            default:
+                throw new Exception("Error! No button " + button);
+        }
+    }
     public double getResult() {
         return result;
     }
     public void showWindow() {
         JFrame frame = new JFrame("Calculator");
-        frame.setContentPane(this.CalcPanel);
+        frame.setContentPane(this.calculatorView); // frame.setContentPane(this.CalcPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
