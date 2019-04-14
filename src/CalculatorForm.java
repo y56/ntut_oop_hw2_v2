@@ -4,8 +4,16 @@ import java.awt.event.ActionListener;
 
 public class CalculatorForm {
     public void testClick(String button) throws Exception;
-    public double getResult();
-    public void showWindow();
+    public double getResult() {
+        return result;
+    }
+    public void showWindow() {
+        JFrame frame = new JFrame("Calculator");
+        frame.setContentPane(this.CalcPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 
     private JButton a0Button;
     private JButton a1Button;
