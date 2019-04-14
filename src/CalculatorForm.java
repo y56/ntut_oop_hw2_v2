@@ -130,7 +130,7 @@ public class CalculatorForm {
         digitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                enterDigit(".");
             }
         });
 
