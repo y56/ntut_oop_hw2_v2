@@ -3,6 +3,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CalculatorForm {
+//    public void testClick(String button) throws Exception;
+//    public double getResult();
+//    public void showWindow();
+
     private JButton a0Button;
     private JButton a1Button;
     private JButton a2Button;
