@@ -76,6 +76,13 @@ public class CalculatorForm {
         }
         displayField.setText(displayString);
     }
+    private void clearAll() {
+        isDigitEnterMode = false;
+        CalcOP lastOP = CalcOP.NONE;
+        displayString = "";
+        result = 0;
+        displayField.setText(displayString);
+    }
     public CalculatorForm() {
         equalButton.addActionListener(new ActionListener() {
             @Override
@@ -124,16 +131,16 @@ public class CalculatorForm {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                clearAll();
             }
         });
+
         digitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 enterDigit(".");
             }
         });
-
         a4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
