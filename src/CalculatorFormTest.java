@@ -1,9 +1,11 @@
 import org.junit.Test;
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+//import org.junit.jupiter.api.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
-import java.io.*;
+//import java.io.*;
 
 
 public class CalculatorFormTest {
@@ -37,7 +39,7 @@ public class CalculatorFormTest {
         }
     }
 
-    @ Test
+    @Test
     public void testAddSub() {
         double result = 0;
         clearAll();
@@ -45,7 +47,7 @@ public class CalculatorFormTest {
         assertEquals(-210, result, 0);
     }
 
-    @ Test
+    @Test
     public void testMultiply() {
         double result = 0;
         clearAll();
@@ -53,7 +55,7 @@ public class CalculatorFormTest {
         assertEquals(300, result, 0);
     }
 
-    @ Test
+    @Test
     public void testDivision() {
         double result = 0;
         clearAll();
@@ -61,7 +63,7 @@ public class CalculatorFormTest {
         assertEquals(10, result, 0);
     }
 
-    @ Test
+    @Test
     public void testFloatingPoint() {
         double result = 0;
         clearAll();
